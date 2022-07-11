@@ -1,0 +1,113 @@
+:root{
+    --bg-color: black;
+    --txt-color: white;
+}
+
+body{
+    background-color: black;
+    color: var(--txt-color);
+    margin: 0%;
+    overflow: hidden;
+}
+ #character{
+    margin: 16rem 50% 0% 50%;
+    width: 100px;
+    height:100px;
+    float: left;
+    position: relative;
+    transform: scale(1.5);
+    filter: drop-shadow(0.5rem 0 0.5rem crimson);
+    filter: hue-rotate(50);
+    
+}
+#character-base{
+    position: absolute;
+    float: left;
+    z-index: 2;
+    top: 10%;
+    fill: red;
+}
+#character-hair{
+    position: absolute;
+    left: -10%;
+    top: 0%;
+    z-index: 1;
+}
+#character-glasses{
+    z-index: 2;
+    position: absolute;
+    left: 40%;
+    top: 70%;
+}
+#bg-container{
+    background-color: black;
+    height: 40rem;
+    float: left;
+    margin: auto;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+#character-base-p{
+    fill: black;
+}
+#character-hair-p {
+    fill: black;
+}
+#character-glasses-p{
+    fill: white;
+}
+path{
+    stroke-width: 0.03rem;
+}
+#car {
+    position: absolute;
+    top: 35%;
+    right: -50vw;
+    -webkit-animation: action 3s linear infinite ;
+    animation: action 3s linear infinite ;
+    visibility: hidden;
+}
+.car {
+    position: absolute;
+    top: 35%;
+    right: -50vw;
+    -webkit-animation: action 3s linear infinite ;
+    animation: action 3s linear infinite ;
+    float: left;
+}
+@-webkit-keyframes action {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-150vw);}
+}
+
+@keyframes action {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-150vw);}
+}
+.dot{
+    width: 5rem;
+    height: 5rem;
+    z-index: 0;
+    background-color: red;
+    float: left;
+    border-radius: 50%;
+    
+    position: absolute;
+    left: -50vw;
+    top: 25rem;
+    filter: blur(1rem);
+    animation: light 1s ease-in infinite ;
+}
+
+@-webkit-keyframes light {
+    0% { transform: translateX(0); opacity: 0;}
+    50% {opacity: 1;}
+    100% { transform: translateX(150vw); opacity: 0;}
+}
+
+@keyframes light {
+    0% { transform: translateX(0); opacity: 0;}
+    50% {opacity: 1;}
+    100% { transform: translateX(150vw); opacity: 0;}
+}
