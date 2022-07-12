@@ -16,8 +16,9 @@ body{
     float: left;
     position: relative;
     transform: scale(1.5);
-    filter: drop-shadow(0.5rem 0 0.5rem crimson);
+    filter: drop-shadow(0.5rem 0rem 0.3rem crimson);
     filter: hue-rotate(50);
+    z-index: 1;
     
 }
 #character-base{
@@ -83,31 +84,49 @@ path{
 
 @keyframes action {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-150vw);}
+    100% { transform: translateX(-300vw);}
 }
 .dot{
-    width: 5rem;
-    height: 5rem;
+    width: 100rem;
+    height: 100rem;
     z-index: 0;
     background-color: red;
     float: left;
     border-radius: 50%;
     
     position: absolute;
-    left: -50vw;
-    top: 25rem;
-    filter: blur(1rem);
-    animation: light 1s ease-in infinite ;
+    left: -110vw;
+    top: 10rem;
+    filter: blur(6rem);
+    animation: light 6s ease-in infinite ;
 }
 
 @-webkit-keyframes light {
     0% { transform: translateX(0); opacity: 0;}
     50% {opacity: 1;}
-    100% { transform: translateX(150vw); opacity: 0;}
+    100% { transform: translateX(300vw);}
 }
 
 @keyframes light {
     0% { transform: translateX(0); opacity: 0;}
     50% {opacity: 1;}
-    100% { transform: translateX(150vw); opacity: 0;}
+    100% { transform: translateX(300vw);}
+}
+#floor {
+    background-color: black;
+    opacity: 0.7;
+    float: left;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    margin: 0%;
+    top: 19rem;
+}
+#second-section{
+    background-color: black;
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    top: 43rem;
+    z-index: 2;
 }
