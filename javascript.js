@@ -62,3 +62,10 @@ function updateShadow(){
     //console.log(getDotPosition())
 }
 var myVar = setInterval(updateShadow, 10);
+
+class node{
+    constructor(id, parent){
+        this.id = id;
+        this.parent = parent;
+    }
+}
